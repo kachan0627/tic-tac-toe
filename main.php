@@ -4,8 +4,8 @@ define("piece_x"," x " );
 define("none"," n ");
 define("randam_play","");
 
-$game_count = 0;
-$standard_board = [
+$gameCount = 0;
+$standardBoard = [
     [none,none,none],
     [none,none,none],
     [none,none,none]
@@ -86,16 +86,16 @@ function n_exists(){
 
 for($x=0 ; $x <= 2 ; $x++){
 
-$input =  player_turn();
+$input =  playerTurn();
 
-$player_board = player_put($input[0],$input[1],$standard_board);
+$playerBoard = playerPut($input[0],$input[1],$standard_board);
 
-print_board($player_board);
+printBoard($player_board);
 
 // victory_judgment($player_board);
 
-$cpu_board = cpu_put($now_board);
+$cpu_board = cpuPut($now_board);
 
-print_board($cpu_board);
+printBoard($cpu_board);
 
 }
